@@ -6,19 +6,26 @@
 
 package view;
 
+import controller.PlayerController;
+import javax.swing.ImageIcon;
+
 /**
  * Panel permainan.
  * Berisi pemain dan musuh.
- * Warna background dapat berubah-ubah
+ * Warna background dapat berubah-ubah.
  * @author Asus
  */
 public class GamePanel extends javax.swing.JPanel {
-
+  /*Controller untuk player*/
+  private PlayerController playerController;
+  
   /**
-   * Creates new form GamePanel.
+   * Konstruktor.
    */
   public GamePanel() {
     initComponents();
+    settingComponents();
+    playerController = new PlayerController(player);
   }
 
   /**
@@ -36,18 +43,34 @@ public class GamePanel extends javax.swing.JPanel {
     setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
     setMaximumSize(new java.awt.Dimension(714, 300));
     setMinimumSize(new java.awt.Dimension(714, 300));
-    setName("player"); // NOI18N
+    setName(""); // NOI18N
     setPreferredSize(new java.awt.Dimension(714, 300));
     setLayout(null);
 
-    player.setIcon(new javax.swing.ImageIcon("D:\\STEI ITB\\Kuliah Informatika\\semester 4\\IF2210 OOP\\tubes 3\\KomodoRun\\assets\\komodo.gif")); // NOI18N
+    player.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/komodo.gif"))); // NOI18N
+    player.setName("player"); // NOI18N
+    player.addKeyListener(new java.awt.event.KeyAdapter() {
+      public void keyTyped(java.awt.event.KeyEvent evt) {
+        playerKeyTyped(evt);
+      }
+    });
     add(player);
     player.setBounds(0, 222, 64, 78);
 
     getAccessibleContext().setAccessibleParent(this);
   }// </editor-fold>//GEN-END:initComponents
 
+  private void playerKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_playerKeyTyped
+    //TODO Panggil controller lompat
+  }//GEN-LAST:event_playerKeyTyped
 
+  /**
+   * Pengaturan tambahan.
+   */
+  private void settingComponents() {
+    player.setFocusable(true);
+  }
+  
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JLabel player;
   // End of variables declaration//GEN-END:variables

@@ -32,11 +32,6 @@ public interface Renderable {
    */
   public int getHeight();
   /**
-   * Getter alamat asset yang digunakan.
-   * @return alamat asset.
-   */
-  public String getAsset();
-  /**
    * Setter absis dalam koordinat.
    * @param absis absis
    */
@@ -56,9 +51,4 @@ public interface Renderable {
    * @param height tinggi
    */
   public void setHeight(int height);
-  /**
-   * Setter lokasi dari asset.
-   * @param assetLocation lokasi asset
-   */
-  public void setAsset(String assetLocation);
 }

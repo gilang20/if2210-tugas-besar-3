@@ -21,8 +21,6 @@ public class Player implements Renderable{
   private int width;
   /*Ketinggian*/
   private int height;
-  /*Asset*/
-  private String asset;
   /*Apakah pemain sedang melompat*/
   private boolean isJumping;
   /*Kecepatan vertikal (kecepatan lompatan)*/
@@ -30,13 +28,11 @@ public class Player implements Renderable{
   
   /**
    * Konstruktor.
-   * @param asset lokasi asset
    */
-  public Player(String asset) {
+  public Player() {
     this.absis = 0;
     this.ordinat = 0;
     defaultOrdinat = 0;
-    this.asset = asset;
     isJumping = false;
     verticalSpeed = 0;
   }
@@ -78,15 +74,6 @@ public class Player implements Renderable{
   }
   
   /**
-   * Getter alamat asset yang digunakan.
-   * @return alamat asset.
-   */
-  @Override
-  public String getAsset() {
-    return asset;
-  }
-  
-  /**
    * Setter absis dalam koordinat.
    * @param absis absis
    */
@@ -102,15 +89,6 @@ public class Player implements Renderable{
   @Override
   public void setOrdinat(int ordinat) {
     this.ordinat = ordinat;
-  }
-  
-  /**
-   * Setter lokasi dari asset.
-   * @param assetLocation lokasi asset
-   */
-  @Override
-  public void setAsset(String assetLocation) {
-    asset = assetLocation;
   }
   
   /**

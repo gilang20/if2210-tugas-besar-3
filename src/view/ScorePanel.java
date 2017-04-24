@@ -29,7 +29,7 @@ public class ScorePanel extends javax.swing.JPanel {
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
 
-    setBackground(new java.awt.Color(0, 0, 0));
+    setBackground(new java.awt.Color(153, 153, 153));
     setMaximumSize(new java.awt.Dimension(714, 50));
     setMinimumSize(new java.awt.Dimension(714, 50));
 

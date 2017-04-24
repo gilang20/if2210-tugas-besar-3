@@ -16,10 +16,9 @@ public class Wall extends Enemy {
   
   /**
    * Konstruktor.
-   * @param asset lokasi asset
    */
-  public Wall(String asset) {
-    super(asset);
+  public Wall() {
+    super();
   }
   
   /**

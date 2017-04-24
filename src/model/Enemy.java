@@ -24,19 +24,15 @@ public abstract class Enemy implements Renderable{
   private int width;
   /*Ketinggian*/
   private int height;
-  /*Asset*/
-  private String asset;
   /*Kecepatan dasar*/
   private int baseSpeed;
   
   /**
    * Konstruktor.
-   * @param asset lokasi asset
    */
-  public Enemy(String asset) {
+  public Enemy() {
     this.absis = 0;
     this.ordinat = 0;
-    this.asset = asset;
     baseSpeed = MIN_BASE_SPEED;
   }
   
@@ -77,15 +73,6 @@ public abstract class Enemy implements Renderable{
   }
   
   /**
-   * Getter alamat asset yang digunakan.
-   * @return alamat asset.
-   */
-  @Override
-  public String getAsset() {
-    return asset;
-  }
-  
-  /**
    * Setter absis dalam koordinat.
    * @param absis absis
    */
@@ -119,15 +106,6 @@ public abstract class Enemy implements Renderable{
   @Override
   public void setHeight(int height) {
     this.height = height;
-  }
-  
-  /**
-   * Setter lokasi dari asset.
-   * @param assetLocation lokasi asset
-   */
-  @Override
-  public void setAsset(String assetLocation) {
-    asset = assetLocation;
   }
   
   /**
