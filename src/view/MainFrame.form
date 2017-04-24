@@ -31,8 +31,8 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="gamePanel" min="-2" max="-2" attributes="0"/>
-                  <Component id="scorePanel1" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="ground" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="scorePanel" min="-2" pref="714" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
@@ -41,7 +41,7 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <Component id="scorePanel1" min="-2" max="-2" attributes="0"/>
+              <Component id="scorePanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               <Component id="gamePanel" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
@@ -87,20 +87,7 @@
     </Container>
     <Component class="view.GamePanel" name="gamePanel">
     </Component>
-    <Container class="view.ScorePanel" name="scorePanel1">
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="714" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="50" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-    </Container>
+    <Component class="view.ScorePanel" name="scorePanel">
+    </Component>
   </SubComponents>
 </Form>
