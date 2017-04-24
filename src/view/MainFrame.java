@@ -6,6 +6,10 @@
 
 package view;
 
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * Frame utama.
  * @author Asus

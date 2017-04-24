@@ -8,6 +8,8 @@ package view;
 
 import controller.DataController;
 import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  * Panel skor.
  * Menampilkan skor permainan.
@@ -20,9 +22,13 @@ public class ScorePanel extends javax.swing.JPanel {
   /**
    * Creates new form ScorePanel
    */
-  public ScorePanel() throws FileNotFoundException{
+  public ScorePanel() {
     initComponents();
-    dataController = new DataController(score, highScore,level);
+    try {
+      dataController = new DataController(score, highScore,level);
+    } catch (FileNotFoundException ex) {
+      System.out.println("File Not Found");
+    }
     dataController.start();
   }
 
