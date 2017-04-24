@@ -6,8 +6,11 @@
 
 package view;
 
+import controller.EnemyController;
 import controller.PlayerController;
+import java.util.Vector;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 /**
  * Panel permainan.
@@ -18,15 +21,24 @@ import javax.swing.ImageIcon;
 public class GamePanel extends javax.swing.JPanel {
   /*Controller untuk player*/
   private PlayerController playerController;
+  /*Controller untuk enemy*/
+  private EnemyController enemyController;
   
   /**
    * Konstruktor.
    */
   public GamePanel() {
     initComponents();
+    //Menghubungkan player dengan controller
     player.setFocusable(true);
     playerController = new PlayerController(player);
     playerController.start();
+    //Menghubungkan enemy dengan controller
+    Vector<JLabel> enemyVector = new Vector<>();
+    enemyVector.add(wall1);
+    enemyVector.add(wall2);
+    enemyController = new EnemyController(enemyVector);
+    enemyController.start();
   }
 
   /**
@@ -39,6 +51,9 @@ public class GamePanel extends javax.swing.JPanel {
   private void initComponents() {
 
     player = new javax.swing.JLabel();
+    wall1 = new javax.swing.JLabel();
+    wall2 = new javax.swing.JLabel();
+    wall3 = new javax.swing.JLabel();
 
     setBackground(new java.awt.Color(102, 255, 204));
     setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
@@ -51,25 +66,55 @@ public class GamePanel extends javax.swing.JPanel {
     player.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/komodo.gif"))); // NOI18N
     player.setName("player"); // NOI18N
     player.addKeyListener(new java.awt.event.KeyAdapter() {
-      public void keyReleased(java.awt.event.KeyEvent evt) {
-        playerKeyReleased(evt);
+      public void keyPressed(java.awt.event.KeyEvent evt) {
+        playerKeyPressed(evt);
       }
     });
     add(player);
     player.setBounds(37, 222, 64, 78);
 
+    wall1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
+    wall1.setText("jLabel1");
+    wall1.setMaximumSize(new java.awt.Dimension(35, 70));
+    wall1.setMinimumSize(new java.awt.Dimension(35, 70));
+    wall1.setName("wall"); // NOI18N
+    wall1.setPreferredSize(new java.awt.Dimension(35, 70));
+    add(wall1);
+    wall1.setBounds(715, 230, 35, 70);
+
+    wall2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
+    wall2.setText("jLabel1");
+    wall2.setMaximumSize(new java.awt.Dimension(35, 70));
+    wall2.setMinimumSize(new java.awt.Dimension(35, 70));
+    wall2.setName("wall"); // NOI18N
+    wall2.setPreferredSize(new java.awt.Dimension(35, 70));
+    add(wall2);
+    wall2.setBounds(715, 230, 35, 70);
+
+    wall3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
+    wall3.setText("jLabel1");
+    wall3.setMaximumSize(new java.awt.Dimension(35, 70));
+    wall3.setMinimumSize(new java.awt.Dimension(35, 70));
+    wall3.setName("wall"); // NOI18N
+    wall3.setPreferredSize(new java.awt.Dimension(35, 70));
+    add(wall3);
+    wall3.setBounds(715, 230, 35, 70);
+
     getAccessibleContext().setAccessibleParent(this);
   }// </editor-fold>//GEN-END:initComponents
 
-  private void playerKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_playerKeyReleased
+  private void playerKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_playerKeyPressed
     if (!playerController.isStartJumping && evt.getExtendedKeyCode() == 38) {
       System.out.println("up");
       playerController.isStartJumping = true;
     }
-  }//GEN-LAST:event_playerKeyReleased
+  }//GEN-LAST:event_playerKeyPressed
 
   
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JLabel player;
+  private javax.swing.JLabel wall1;
+  private javax.swing.JLabel wall2;
+  private javax.swing.JLabel wall3;
   // End of variables declaration//GEN-END:variables
 }
