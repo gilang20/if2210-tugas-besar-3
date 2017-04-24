@@ -5,6 +5,8 @@
  */
 
 package model;
+import java.io.*;
+import java.util.Scanner;
 
 /**
  * Merepresentasikan setiap round dari game.
@@ -18,9 +20,10 @@ public class GameState {
   /**
    * Konstruktor.
    */
-  public GameState() {
+  public GameState() throws FileNotFoundException {
     score = 0;
     level = 0;
+    loadHighScore();
   }
   
   /**
@@ -69,5 +72,23 @@ public class GameState {
    */
   public void setLevel(int level) {
     this.level = level;
+  }
+  
+  /**
+   * Loader data highScore.
+   */
+  public void loadHighScore() throws FileNotFoundException{
+    Scanner fileScanner = new Scanner(new File("src/data/HighScore.txt"));
+    highScore = fileScanner.nextInt();
+  }
+  
+  /**
+   * Saving data highScore.
+   */
+  public void saveHighScore() throws FileNotFoundException{
+    File Fileout = new File("src/data/HighScore.txt");
+    PrintWriter fileWriter = new PrintWriter(Fileout);
+    fileWriter.println(highScore);
+    fileWriter.flush();
   }
 }
