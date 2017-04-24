@@ -24,8 +24,9 @@ public class GamePanel extends javax.swing.JPanel {
    */
   public GamePanel() {
     initComponents();
-    settingComponents();
+    player.setFocusable(true);
     playerController = new PlayerController(player);
+    playerController.start();
   }
 
   /**
@@ -50,8 +51,8 @@ public class GamePanel extends javax.swing.JPanel {
     player.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/komodo.gif"))); // NOI18N
     player.setName("player"); // NOI18N
     player.addKeyListener(new java.awt.event.KeyAdapter() {
-      public void keyTyped(java.awt.event.KeyEvent evt) {
-        playerKeyTyped(evt);
+      public void keyReleased(java.awt.event.KeyEvent evt) {
+        playerKeyReleased(evt);
       }
     });
     add(player);
@@ -60,16 +61,13 @@ public class GamePanel extends javax.swing.JPanel {
     getAccessibleContext().setAccessibleParent(this);
   }// </editor-fold>//GEN-END:initComponents
 
-  private void playerKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_playerKeyTyped
-    //TODO Panggil controller lompat
-  }//GEN-LAST:event_playerKeyTyped
+  private void playerKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_playerKeyReleased
+    if (!playerController.isStartJumping && evt.getExtendedKeyCode() == 38) {
+      System.out.println("up");
+      playerController.isStartJumping = true;
+    }
+  }//GEN-LAST:event_playerKeyReleased
 
-  /**
-   * Pengaturan tambahan.
-   */
-  private void settingComponents() {
-    player.setFocusable(true);
-  }
   
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JLabel player;
