@@ -56,7 +56,7 @@ public class GamePanel extends javax.swing.JPanel {
       }
     });
     add(player);
-    player.setBounds(0, 222, 64, 78);
+    player.setBounds(37, 222, 64, 78);
 
     getAccessibleContext().setAccessibleParent(this);
   }// </editor-fold>//GEN-END:initComponents

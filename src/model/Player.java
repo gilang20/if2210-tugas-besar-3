@@ -21,10 +21,6 @@ public class Player implements Renderable{
   private int width;
   /*Ketinggian*/
   private int height;
-  /*Apakah pemain sedang melompat*/
-  private boolean isJumping;
-  /*Kecepatan vertikal (kecepatan lompatan)*/
-  private int verticalSpeed;
   
   /**
    * Konstruktor.
@@ -33,8 +29,6 @@ public class Player implements Renderable{
     this.absis = 0;
     this.ordinat = 0;
     defaultOrdinat = 0;
-    isJumping = false;
-    verticalSpeed = 0;
   }
   
   /**
@@ -118,42 +112,10 @@ public class Player implements Renderable{
   }
   
   /**
-   * Getter isJumping.
-   * @return boolean apakah player sedang melompat
-   */
-  public boolean getIsJumping() {
-    return isJumping;
-  }
-  
-  /**
-   * Getter kecepatan vertikal, yaitu kecepatan saat melompat.
-   * @return kecepatan vertikal
-   */
-  public int getVerticalSpeed() {
-    return verticalSpeed;
-  }
-  
-  /**
    * Setter default ordinat, yaitu ordinat saat pemain memijak tanah.
    * @param defaultOrdinat default ordinat
    */
   public void setDefaultOrdinat(int defaultOrdinat) {
     this.defaultOrdinat = defaultOrdinat;
-  }
-  
-  /**
-   * Setter isJumping.
-   * @param isJumping boolean apakah player sedang melompat
-   */
-  public void setIsJumping(boolean isJumping) {
-    this.isJumping = isJumping;
-  }
-  
-  /**
-   * Setter kecepatan vertikal, yaitu kecepatan saat melompat.
-   * @param verticalSpeed kecepatan vertikal
-   */
-  public void setVerticalSpeed(int verticalSpeed) {
-    this.verticalSpeed = verticalSpeed;
   }
 }

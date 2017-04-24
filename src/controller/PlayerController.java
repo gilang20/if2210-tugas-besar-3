@@ -43,32 +43,30 @@ public class PlayerController extends Thread {
    * Membuat pemain melompat.
    */
   public void jump() {
-    if (!playerModel.getIsJumping()) {
-      int initialOrdinat = playerModel.getOrdinat();
-      int verticalDelay = 80;
-      do {
-        playerModel.setOrdinat(playerView.getY()-1);
-        playerView.setLocation(playerModel.getAbsis(), playerModel.getOrdinat());
-        try {
-          sleep(verticalDelay/80);
-        } catch (InterruptedException ex) {
-          System.out.println("InterruptedException");
-        }
-        verticalDelay++;
-      } while (verticalDelay < 247);
-      do {
-        playerModel.setOrdinat(playerView.getY()+1);
-        playerView.setLocation(playerModel.getAbsis(), playerModel.getOrdinat());
-        try {
-          sleep(verticalDelay/80);
-        } catch (InterruptedException ex) {
-          System.out.println("InterruptedException");
-        }
-        verticalDelay--;
-      } while (verticalDelay > 80);
-      playerView.setLocation(playerModel.getAbsis(), initialOrdinat);
-      isStartJumping = false;
-    }
+    int initialOrdinat = playerModel.getOrdinat();
+    int verticalDelay = 80;
+    do {
+      playerModel.setOrdinat(playerView.getY()-1);
+      playerView.setLocation(playerModel.getAbsis(), playerModel.getOrdinat());
+      try {
+        sleep(verticalDelay/80);
+      } catch (InterruptedException ex) {
+        System.out.println("InterruptedException");
+      }
+      verticalDelay++;
+    } while (verticalDelay < 247);
+    do {
+      playerModel.setOrdinat(playerView.getY()+1);
+      playerView.setLocation(playerModel.getAbsis(), playerModel.getOrdinat());
+      try {
+        sleep(verticalDelay/80);
+      } catch (InterruptedException ex) {
+        System.out.println("InterruptedException");
+      }
+      verticalDelay--;
+    } while (verticalDelay > 80);
+    playerView.setLocation(playerModel.getAbsis(), initialOrdinat);
+    isStartJumping = false;
   }
   
   @Override
@@ -81,6 +79,7 @@ public class PlayerController extends Thread {
       }
       if (isStartJumping) {
         jump();
+        isStartJumping = false;
       }
     }
   }
