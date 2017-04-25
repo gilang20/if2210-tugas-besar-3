@@ -13,11 +13,22 @@ package view;
 public class MainFrame extends javax.swing.JFrame {
   /*Dialog pembuka*/
   private StartDialog startDialog;
+  /*Dialog penutup*/
+  private EndDialog endDialog;
   
   /**
    * Konstruktor.
    */
   public MainFrame() {
+    initComponents();
+    settingComponents();
+  }
+  
+  /**
+   * Mereset seluruh komponen seperti semula.
+   */
+  public void reInitComponent() {
+    setVisible(false);
     initComponents();
     settingComponents();
   }
@@ -38,10 +49,8 @@ public class MainFrame extends javax.swing.JFrame {
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     setTitle("Komodo Run");
     setBackground(new java.awt.Color(0, 0, 0));
-    setMaximumSize(new java.awt.Dimension(714, 420));
     setMinimumSize(new java.awt.Dimension(714, 420));
     setName("mainFrame"); // NOI18N
-    setPreferredSize(new java.awt.Dimension(714, 420));
 
     ground.setBackground(new java.awt.Color(153, 153, 0));
     ground.setAlignmentX(0.0F);
@@ -88,10 +97,12 @@ public class MainFrame extends javax.swing.JFrame {
    * Setting tambahan untuk komponen.
    */
   private void settingComponents() {
+    gamePanel.setParent(this);
     this.setResizable(false);
     this.pack();
     this.setVisible(true);
     startDialog = new StartDialog(this,true);
+    endDialog = new EndDialog(this,true);
   }
   
   // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -116,4 +127,19 @@ public class MainFrame extends javax.swing.JFrame {
     return scorePanel;
   }
 
+  /**
+   * Getter EndDialog.
+   * @return EndDialog
+   */
+  public EndDialog getEndDialog() {
+    return endDialog;
+  }
+  
+  /**
+   * Getter StartDialog.
+   * @return StartDialog
+   */
+  public StartDialog getStartDialog() {
+    return startDialog;
+  }
 }

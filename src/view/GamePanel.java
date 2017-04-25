@@ -22,22 +22,37 @@ public class GamePanel extends javax.swing.JPanel {
   private PlayerController playerController;
   /*Controller untuk enemy*/
   private EnemyController enemyController;
+  /*Parent*/
+  private MainFrame parent;
   
   /**
    * Konstruktor.
    */
   public GamePanel() {
     initComponents();
-    //Menghubungkan player dengan controller
     player.setFocusable(true);
     playerController = new PlayerController(player);
-    //playerController.start();
-    //Menghubungkan enemy dengan controller
     Vector<JLabel> enemyVector = new Vector<>();
     enemyVector.add(wall1);
     enemyVector.add(wall2);
-    enemyController = new EnemyController(enemyVector);
-    //enemyController.start();
+    enemyController = new EnemyController(enemyVector, this);
+  }
+  
+  /**
+   * Setter parent.
+   * @param mainFrame parent 
+   */
+  public void setParent(MainFrame mainFrame) {
+    parent = mainFrame;
+  }
+  
+  /**
+   * Getter parent.
+   * @return parent
+   */
+  @Override
+  public MainFrame getParent() {
+    return parent;
   }
 
   /**

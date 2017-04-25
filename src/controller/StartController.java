@@ -6,7 +6,6 @@
 
 package controller;
 
-import java.awt.Component;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -36,7 +35,8 @@ public class StartController {
     try {
       fileScanner = new Scanner(new File("src/data/HighScore.txt"));
       int highScore = fileScanner.nextInt();
-      startDialog.getHighScoreDisplay().setText("HighScore = " + highScore);
+      startDialog.getHighScoreDisplay().setText("High Score = " + highScore);
+      startDialog.pack();
     } catch (FileNotFoundException ex) {
       System.out.println("File Not Found");
     }

@@ -65,13 +65,13 @@ public class ScorePanel extends javax.swing.JPanel {
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-        .addGap(64, 64, 64)
+        .addGap(106, 106, 106)
         .addComponent(level)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 145, Short.MAX_VALUE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
         .addComponent(highScore)
-        .addGap(143, 143, 143)
+        .addGap(124, 124, 124)
         .addComponent(score)
-        .addGap(169, 169, 169))
+        .addGap(156, 156, 156))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

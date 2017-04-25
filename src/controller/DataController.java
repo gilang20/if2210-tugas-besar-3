@@ -36,13 +36,13 @@ public class DataController extends Thread{
     long startTime = System.nanoTime();
     while (true) {
       try {
-        sleep(100-gameStateModel.getLevel()*3);
+        sleep(100 - gameStateModel.getLevel() * 3);
       } catch (InterruptedException ex) {
         System.out.println("InterruptedException");
       }
-      gameStateModel.setScore(gameStateModel.getScore()+1);
+      gameStateModel.setScore(gameStateModel.getScore() + 1);
       scoreView.setText("Score : " + gameStateModel.getScore());
-      if(gameStateModel.getScore()> gameStateModel.getHighScore()){
+      if (gameStateModel.getScore() > gameStateModel.getHighScore()){
         gameStateModel.setHighScore(gameStateModel.getScore());
         try {
           gameStateModel.saveHighScore();
@@ -51,10 +51,17 @@ public class DataController extends Thread{
         }
       }
       highScoreView.setText("High Score : " + gameStateModel.getHighScore());
-      gameStateModel.setLevel((int)(((System.nanoTime()-startTime)
-              /1500000000)/10));
+      gameStateModel.setLevel((int)(((System.nanoTime() - startTime)
+          / 1500000000) / 10));
       levelView.setText("Level : " + gameStateModel.getLevel());
     }
   }
   
+  /**
+   * Getter GameState.
+   * @return GameState
+   */
+  public GameState getGameStateModel() {
+    return gameStateModel;
+  }
 }

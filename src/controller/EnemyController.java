@@ -11,6 +11,7 @@ import java.util.Vector;
 import javax.swing.JLabel;
 import model.Enemy;
 import model.Wall;
+import view.GamePanel;
 
 /**
  * Controller untuk musuh.
@@ -44,12 +45,17 @@ public class EnemyController extends Thread{
   private int[] activeEnemy;
   /*Generator random*/
   private Random random;
+  /*Referensi ke GamePanel*/
+  private GamePanel gamePanel;
   
   /**
    * Konstruktor.
    * @param jlabelVector vector of JLabel
+   * @param playerController referensi ke PlayerController
    */
-  public EnemyController(Vector<JLabel> jlabelVector) {
+  public EnemyController(Vector<JLabel> jlabelVector, 
+      GamePanel gamePanel) {
+    this.gamePanel = gamePanel;
     random = new Random();
     numberOfActiveEnemy = 0;
     activeEnemy= new int[MAX_NUMBER_OF_ACTIVE_ENEMY];
@@ -152,6 +158,37 @@ public class EnemyController extends Thread{
     }
   }
   
+  /**
+   * Memeriksa apakah enemy bersentuhan dengan player.
+   */
+  private void checkPlayerContact() {
+    boolean isContact = false;
+    for (int i = 0; i < MAX_NUMBER_OF_ACTIVE_ENEMY; i++) {
+      if (activeEnemy[i] >= 0) {
+        if (enemyVector.get(activeEnemy[i]).getAbsis() 
+            > gamePanel.getPlayerController().getPlayerModel().getAbsis() 
+            - enemyVector.get(activeEnemy[i]).getWidth()
+            && enemyVector.get(activeEnemy[i]).getAbsis()
+            < gamePanel.getPlayerController().getPlayerModel().getAbsis()
+            + gamePanel.getPlayerController().getPlayerModel().getWidth()) {
+          if (enemyVector.get(activeEnemy[i]).getOrdinat()
+              < gamePanel.getPlayerController().getPlayerModel().getOrdinat()
+              + gamePanel.getPlayerController().getPlayerModel().getHeight()
+              && enemyVector.get(activeEnemy[i]).getOrdinat()
+              > gamePanel.getPlayerController().getPlayerModel().getOrdinat()
+              - enemyVector.get(activeEnemy[i]).getHeight()) {
+            isContact = true;
+            break;
+          }
+        }
+      }
+    }
+    if (isContact && !gamePanel.getParent().getEndDialog().isVisible()) {
+      System.out.println("dead");
+      gamePanel.getParent().getEndDialog().getEndController().endGame();
+    }
+  }
+  
   @Override
   public void run() {
     while (true) {
@@ -164,6 +201,7 @@ public class EnemyController extends Thread{
         addActiveEnemy();
       }
       moveActiveEnemy();
+      checkPlayerContact();
       checkActiveEnemy();
     }
   }

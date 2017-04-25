@@ -83,4 +83,12 @@ public class PlayerController extends Thread {
       }
     }
   }
+  
+  /**
+   * Getter PlayerModel.
+   * @return model untuk Player
+   */
+  public Player getPlayerModel() {
+    return playerModel;
+  }
 }
