@@ -14,12 +14,12 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Test untuk Trap.
+ *
  * @author Asus
  */
-public class TrapTest {
+public class BirdTest {
   
-  public TrapTest() {
+  public BirdTest() {
   }
   
   @BeforeClass
@@ -39,13 +39,13 @@ public class TrapTest {
   }
 
   /**
-   * Test of getAdditionalSpeed method, of class Trap.
+   * Test of getAdditionalSpeed method, of class Bird.
    */
   @Test
   public void testGetAdditionalSpeed() {
     System.out.println("getAdditionalSpeed");
-    Trap instance = new Trap();
-    int expResult = 2;
+    Bird instance = new Bird();
+    int expResult = -3;
     int result = instance.getAdditionalSpeed();
     assertEquals(expResult, result);
   }
