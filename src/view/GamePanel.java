@@ -9,7 +9,6 @@ package view;
 import controller.EnemyController;
 import controller.PlayerController;
 import java.util.Vector;
-import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 /**
@@ -32,13 +31,13 @@ public class GamePanel extends javax.swing.JPanel {
     //Menghubungkan player dengan controller
     player.setFocusable(true);
     playerController = new PlayerController(player);
-    playerController.start();
+    //playerController.start();
     //Menghubungkan enemy dengan controller
     Vector<JLabel> enemyVector = new Vector<>();
     enemyVector.add(wall1);
     enemyVector.add(wall2);
     enemyController = new EnemyController(enemyVector);
-    enemyController.start();
+    //enemyController.start();
   }
 
   /**
@@ -110,6 +109,21 @@ public class GamePanel extends javax.swing.JPanel {
     }
   }//GEN-LAST:event_playerKeyPressed
 
+  /**
+   * Getter PlayerController.
+   * @return PlayerController dari panel ini
+   */
+  public PlayerController getPlayerController() {
+    return playerController;
+  }
+  
+  /**
+   * Getter EnemyController.
+   * @return EnemyController dari panel ini
+   */
+  public EnemyController getEnemyController() {
+    return enemyController;
+  }
   
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JLabel player;

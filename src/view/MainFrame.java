@@ -6,16 +6,14 @@
 
 package view;
 
-import java.io.FileNotFoundException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  * Frame utama.
  * @author Asus
  */
 public class MainFrame extends javax.swing.JFrame {
-
+  /*Dialog pembuka*/
+  private StartDialog startDialog;
+  
   /**
    * Konstruktor.
    */
@@ -34,43 +32,43 @@ public class MainFrame extends javax.swing.JFrame {
   private void initComponents() {
 
     ground = new javax.swing.JPanel();
-    gamePanel = new view.GamePanel();
     scorePanel = new view.ScorePanel();
+    gamePanel = new view.GamePanel();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     setTitle("Komodo Run");
     setBackground(new java.awt.Color(0, 0, 0));
+    setMaximumSize(new java.awt.Dimension(714, 420));
+    setMinimumSize(new java.awt.Dimension(714, 420));
     setName("mainFrame"); // NOI18N
+    setPreferredSize(new java.awt.Dimension(714, 420));
 
     ground.setBackground(new java.awt.Color(153, 153, 0));
     ground.setAlignmentX(0.0F);
     ground.setAlignmentY(0.0F);
     ground.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-    ground.setMaximumSize(new java.awt.Dimension(714, 36));
-    ground.setMinimumSize(new java.awt.Dimension(714, 36));
-    ground.setPreferredSize(new java.awt.Dimension(714, 36));
+    ground.setMaximumSize(new java.awt.Dimension(714, 50));
+    ground.setMinimumSize(new java.awt.Dimension(714, 50));
+    ground.setPreferredSize(new java.awt.Dimension(714, 50));
 
     javax.swing.GroupLayout groundLayout = new javax.swing.GroupLayout(ground);
     ground.setLayout(groundLayout);
     groundLayout.setHorizontalGroup(
       groundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 714, Short.MAX_VALUE)
+      .addGap(0, 0, Short.MAX_VALUE)
     );
     groundLayout.setVerticalGroup(
       groundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 36, Short.MAX_VALUE)
+      .addGap(0, 50, Short.MAX_VALUE)
     );
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(layout.createSequentialGroup()
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(gamePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(ground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(scorePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 714, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addGap(0, 0, Short.MAX_VALUE))
+      .addComponent(ground, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+      .addComponent(gamePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+      .addComponent(scorePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -79,7 +77,8 @@ public class MainFrame extends javax.swing.JFrame {
         .addGap(0, 0, 0)
         .addComponent(gamePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(0, 0, 0)
-        .addComponent(ground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addComponent(ground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addGap(0, 0, Short.MAX_VALUE))
     );
 
     pack();
@@ -90,6 +89,9 @@ public class MainFrame extends javax.swing.JFrame {
    */
   private void settingComponents() {
     this.setResizable(false);
+    this.pack();
+    this.setVisible(true);
+    startDialog = new StartDialog(this,true);
   }
   
   // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -97,4 +99,21 @@ public class MainFrame extends javax.swing.JFrame {
   private javax.swing.JPanel ground;
   private view.ScorePanel scorePanel;
   // End of variables declaration//GEN-END:variables
+
+  /**
+   * Getter GamePanel.
+   * @return GamePanel dari frame ini.
+   */
+  public GamePanel getGamePanel() {
+    return gamePanel;
+  }
+  
+  /**
+   * Getter ScorePanel.
+   * @return ScorePanel dari frame ini.
+   */
+  public ScorePanel getScorePanel() {
+    return scorePanel;
+  }
+
 }

@@ -8,8 +8,6 @@ package controller;
 
 import java.util.Random;
 import java.util.Vector;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JLabel;
 import model.Enemy;
 import model.Wall;
@@ -65,11 +63,15 @@ public class EnemyController extends Thread{
         Wall wall = new Wall();
         wall.setAbsis(jlabelVector.get(i).getX());
         wall.setOrdinat(jlabelVector.get(i).getY());
+        wall.setHeight(jlabelVector.get(i).getHeight());
+        wall.setWidth(jlabelVector.get(i).getWidth());
         enemyVector.add(wall);
       } else { //TODO objek selain tembok
         Wall wall = new Wall();
         wall.setAbsis(jlabelVector.get(i).getX());
         wall.setOrdinat(jlabelVector.get(i).getY());
+        wall.setHeight(jlabelVector.get(i).getHeight());
+        wall.setWidth(jlabelVector.get(i).getWidth());
         enemyVector.add(wall);
       }
     }

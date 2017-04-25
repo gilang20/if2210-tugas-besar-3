@@ -8,8 +8,7 @@ package view;
 
 import controller.DataController;
 import java.io.FileNotFoundException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 /**
  * Panel skor.
  * Menampilkan skor permainan.
@@ -20,7 +19,7 @@ public class ScorePanel extends javax.swing.JPanel {
   private DataController dataController;
   
   /**
-   * Creates new form ScorePanel
+   * Creates new form ScorePanel.
    */
   public ScorePanel() {
     initComponents();
@@ -29,7 +28,7 @@ public class ScorePanel extends javax.swing.JPanel {
     } catch (FileNotFoundException ex) {
       System.out.println("File Not Found");
     }
-    dataController.start();
+    //dataController.start();
   }
 
   /**
@@ -66,13 +65,13 @@ public class ScorePanel extends javax.swing.JPanel {
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-        .addContainerGap(342, Short.MAX_VALUE)
+        .addGap(64, 64, 64)
         .addComponent(level)
-        .addGap(55, 55, 55)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 145, Short.MAX_VALUE)
         .addComponent(highScore)
-        .addGap(70, 70, 70)
+        .addGap(143, 143, 143)
         .addComponent(score)
-        .addGap(54, 54, 54))
+        .addGap(169, 169, 169))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,6 +85,13 @@ public class ScorePanel extends javax.swing.JPanel {
     );
   }// </editor-fold>//GEN-END:initComponents
 
+  /**
+   * Getter DataController.
+   * @return DataController dari panel ini
+   */
+  public DataController getDataController() {
+    return dataController;
+  }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JLabel highScore;

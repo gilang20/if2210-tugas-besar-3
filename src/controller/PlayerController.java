@@ -6,8 +6,6 @@
 
 package controller;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JLabel;
 import model.Player;
 
@@ -37,6 +35,8 @@ public class PlayerController extends Thread {
     playerModel = new Player();
     playerModel.setAbsis(playerView.getX());
     playerModel.setOrdinat(playerView.getY());
+    playerModel.setHeight(playerView.getHeight());
+    playerModel.setWidth(playerView.getWidth());
   }
   
   /**

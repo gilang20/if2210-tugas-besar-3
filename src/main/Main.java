@@ -22,9 +22,7 @@ public class Main {
     new Thread() {
       @Override
       public void run() {
-        MainFrame mainFrame = new MainFrame();
-        mainFrame.pack();
-        mainFrame.setVisible(true);
+        new MainFrame();
       }
     }.start();
   }
