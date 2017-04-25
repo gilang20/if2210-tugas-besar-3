@@ -44,27 +44,27 @@ public class PlayerController extends Thread {
    */
   public void jump() {
     int initialOrdinat = playerModel.getOrdinat();
-    int verticalDelay = 80;
+    int verticalDelay = 92;
     do {
-      playerModel.setOrdinat(playerView.getY()-1);
+      playerModel.setOrdinat(playerView.getY() - 1);
       playerView.setLocation(playerModel.getAbsis(), playerModel.getOrdinat());
       try {
-        sleep(verticalDelay/80);
+        sleep(verticalDelay / 92);
       } catch (InterruptedException ex) {
         System.out.println("InterruptedException");
       }
       verticalDelay++;
-    } while (verticalDelay < 247);
+    } while (verticalDelay < 277);
     do {
-      playerModel.setOrdinat(playerView.getY()+1);
+      playerModel.setOrdinat(playerView.getY() + 1);
       playerView.setLocation(playerModel.getAbsis(), playerModel.getOrdinat());
       try {
-        sleep(verticalDelay/80);
+        sleep(verticalDelay / 92);
       } catch (InterruptedException ex) {
         System.out.println("InterruptedException");
       }
       verticalDelay--;
-    } while (verticalDelay > 80);
+    } while (verticalDelay > 92);
     playerView.setLocation(playerModel.getAbsis(), initialOrdinat);
     isStartJumping = false;
   }

@@ -56,7 +56,7 @@ public class EnemyController extends Thread{
   public EnemyController(Vector<JLabel> jlabelVector, 
       GamePanel gamePanel) {
     this.gamePanel = gamePanel;
-    random = new Random();
+    random = new Random(0b1111000101101001001011111000);
     numberOfActiveEnemy = 0;
     activeEnemy= new int[MAX_NUMBER_OF_ACTIVE_ENEMY];
     for (int i = 0; i < MAX_NUMBER_OF_ACTIVE_ENEMY; i++) {
