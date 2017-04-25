@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * File : EnemyController.java
+ * Nama : Arno Alexander
+ * NIM : 13515141
+ * Kelompok : Komodo Dragon
  */
 
 package controller;
@@ -9,6 +10,7 @@ package controller;
 import java.util.Random;
 import java.util.Vector;
 import javax.swing.JLabel;
+import model.Cactus;
 import model.Enemy;
 import model.Wall;
 import view.GamePanel;
@@ -72,6 +74,13 @@ public class EnemyController extends Thread{
         wall.setHeight(jlabelVector.get(i).getHeight());
         wall.setWidth(jlabelVector.get(i).getWidth());
         enemyVector.add(wall);
+      } else if (jlabelVector.get(i).getName() == "cactus") {
+        Cactus cactus = new Cactus();
+        cactus.setAbsis(jlabelVector.get(i).getX());
+        cactus.setOrdinat(jlabelVector.get(i).getY());
+        cactus.setHeight(jlabelVector.get(i).getHeight());
+        cactus.setWidth(jlabelVector.get(i).getWidth());
+        enemyVector.add(cactus);
       } else { //TODO objek selain tembok
         Wall wall = new Wall();
         wall.setAbsis(jlabelVector.get(i).getX());
@@ -108,7 +117,7 @@ public class EnemyController extends Thread{
             < ABSIS_FOR_INACTIVE_ENEMY) {
           count++;
           indexOfNewActivatedEnemy = (indexOfNewActivatedEnemy + 1) 
-              % MAX_NUMBER_OF_ACTIVE_ENEMY;
+              % enemyVector.size();
         }
         int index = 0;
         while (index < MAX_NUMBER_OF_ACTIVE_ENEMY) {
@@ -129,13 +138,15 @@ public class EnemyController extends Thread{
    * Memindahkan enemy yang ada pada layar.
    */
   private void moveActiveEnemy() {
-    for (int i = 0; i < enemyVector.size(); i++) {
-      int absis = enemyVector.get(i).getAbsis();
-      absis -= (enemyVector.get(i).getBaseSpeed() 
-          + enemyVector.get(i).getAdditionalSpeed()) / 4;
-      enemyVector.get(i).setAbsis(absis);
-      jlabelVector.get(i).setLocation(enemyVector.get(i).getAbsis(), 
-          enemyVector.get(i).getOrdinat());
+    for (int i = 0; i < MAX_NUMBER_OF_ACTIVE_ENEMY; i++) {
+      if (activeEnemy[i] >= 0) {
+        int absis = enemyVector.get(activeEnemy[i]).getAbsis();
+        absis -= (enemyVector.get(activeEnemy[i]).getBaseSpeed() 
+            + enemyVector.get(activeEnemy[i]).getAdditionalSpeed()) / 4;
+        enemyVector.get(activeEnemy[i]).setAbsis(absis);
+        jlabelVector.get(activeEnemy[i]).setLocation(enemyVector.get(activeEnemy[i])
+            .getAbsis(), enemyVector.get(activeEnemy[i]).getOrdinat());
+      }
     }
   }
   

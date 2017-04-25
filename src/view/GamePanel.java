@@ -35,6 +35,9 @@ public class GamePanel extends javax.swing.JPanel {
     Vector<JLabel> enemyVector = new Vector<>();
     enemyVector.add(wall1);
     enemyVector.add(wall2);
+    enemyVector.add(wall3);
+    enemyVector.add(cactus1);
+    enemyVector.add(cactus2);
     enemyController = new EnemyController(enemyVector, this);
   }
   
@@ -68,6 +71,8 @@ public class GamePanel extends javax.swing.JPanel {
     wall1 = new javax.swing.JLabel();
     wall2 = new javax.swing.JLabel();
     wall3 = new javax.swing.JLabel();
+    cactus1 = new javax.swing.JLabel();
+    cactus2 = new javax.swing.JLabel();
 
     setBackground(new java.awt.Color(102, 255, 204));
     setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
@@ -114,6 +119,24 @@ public class GamePanel extends javax.swing.JPanel {
     add(wall3);
     wall3.setBounds(715, 230, 35, 70);
 
+    cactus1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/cactus.png"))); // NOI18N
+    cactus1.setText("jLabel1");
+    cactus1.setMaximumSize(new java.awt.Dimension(35, 70));
+    cactus1.setMinimumSize(new java.awt.Dimension(35, 70));
+    cactus1.setName("cactus"); // NOI18N
+    cactus1.setPreferredSize(new java.awt.Dimension(35, 70));
+    add(cactus1);
+    cactus1.setBounds(715, 230, 50, 70);
+
+    cactus2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/cactus.png"))); // NOI18N
+    cactus2.setText("jLabel1");
+    cactus2.setMaximumSize(new java.awt.Dimension(35, 70));
+    cactus2.setMinimumSize(new java.awt.Dimension(35, 70));
+    cactus2.setName("cactus"); // NOI18N
+    cactus2.setPreferredSize(new java.awt.Dimension(35, 70));
+    add(cactus2);
+    cactus2.setBounds(715, 230, 50, 70);
+
     getAccessibleContext().setAccessibleParent(this);
   }// </editor-fold>//GEN-END:initComponents
 
@@ -141,6 +164,8 @@ public class GamePanel extends javax.swing.JPanel {
   }
   
   // Variables declaration - do not modify//GEN-BEGIN:variables
+  private javax.swing.JLabel cactus1;
+  private javax.swing.JLabel cactus2;
   private javax.swing.JLabel player;
   private javax.swing.JLabel wall1;
   private javax.swing.JLabel wall2;
