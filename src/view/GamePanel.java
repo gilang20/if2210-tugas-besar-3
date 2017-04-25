@@ -8,6 +8,7 @@ package view;
 
 import controller.EnemyController;
 import controller.PlayerController;
+import controller.BackgroundController;
 import java.util.Vector;
 import javax.swing.JLabel;
 
@@ -22,6 +23,8 @@ public class GamePanel extends javax.swing.JPanel {
   private PlayerController playerController;
   /*Controller untuk enemy*/
   private EnemyController enemyController;
+  /*Controller untuk background*/
+  private BackgroundController backgroundController;
   /*Parent*/
   private MainFrame parent;
   
@@ -32,6 +35,7 @@ public class GamePanel extends javax.swing.JPanel {
     initComponents();
     player.setFocusable(true);
     playerController = new PlayerController(player);
+    backgroundController = new BackgroundController(this);
     Vector<JLabel> enemyVector = new Vector<>();
     enemyVector.add(wall1);
     enemyVector.add(wall2);
@@ -161,6 +165,14 @@ public class GamePanel extends javax.swing.JPanel {
    */
   public EnemyController getEnemyController() {
     return enemyController;
+  }
+  
+  /**
+   * Getter BackgroundController.
+   * @return BackgroundController dari panel ini
+   */
+  public BackgroundController getBackgroundController() {
+    return backgroundController;
   }
   
   // Variables declaration - do not modify//GEN-BEGIN:variables
