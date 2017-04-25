@@ -10,6 +10,7 @@ package controller;
 import java.util.Random;
 import java.util.Vector;
 import javax.swing.JLabel;
+import model.Bird;
 import model.Bullet;
 import model.Cactus;
 import model.Enemy;
@@ -29,7 +30,7 @@ public class EnemyController extends Thread{
   /**
    * Jarak minimum antar enemy yang ditampilkan dalam layar.
    */
-  public static final int MIN_DISTANCE_BETWEEN_ENEMY = 350;
+  public static final int MIN_DISTANCE_BETWEEN_ENEMY = 461;
   /**
    * Absis dari enemy yang tidak aktif.
    */
@@ -60,7 +61,7 @@ public class EnemyController extends Thread{
   public EnemyController(Vector<JLabel> jlabelVector, 
       GamePanel gamePanel) {
     this.gamePanel = gamePanel;
-    random = new Random(0b1111000101101001001011111000);
+    random = new Random(System.currentTimeMillis() / 2 + System.nanoTime() / 2);
     numberOfActiveEnemy = 0;
     activeEnemy= new int[MAX_NUMBER_OF_ACTIVE_ENEMY];
     for (int i = 0; i < MAX_NUMBER_OF_ACTIVE_ENEMY; i++) {
@@ -97,6 +98,13 @@ public class EnemyController extends Thread{
         trap.setHeight(jlabelVector.get(i).getHeight());
         trap.setWidth(jlabelVector.get(i).getWidth());
         enemyVector.add(trap);
+      } else if (jlabelVector.get(i).getName() == "bird") {
+        Bird bird = new Bird();
+        bird.setAbsis(jlabelVector.get(i).getX());
+        bird.setOrdinat(jlabelVector.get(i).getY());
+        bird.setHeight(jlabelVector.get(i).getHeight());
+        bird.setWidth(jlabelVector.get(i).getWidth());
+        enemyVector.add(bird);
       } else {
         Wall wall = new Wall();
         wall.setAbsis(jlabelVector.get(i).getX());

@@ -28,6 +28,8 @@ public class Player implements Renderable{
   public Player() {
     this.absis = 0;
     this.ordinat = 0;
+    this.width = 0;
+    this.height = 0;
     defaultOrdinat = 0;
   }
   

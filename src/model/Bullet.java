@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package model;
 
 /**
- *
+ * Merepresentasikan peluru.
  * @author Rio
  */
 public class Bullet extends Enemy {

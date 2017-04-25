@@ -40,8 +40,21 @@ public class GamePanel extends javax.swing.JPanel {
     enemyVector.add(wall1);
     enemyVector.add(wall2);
     enemyVector.add(wall3);
+    enemyVector.add(wall4);
+    enemyVector.add(wall5);
+    enemyVector.add(wall6);
+    enemyVector.add(wall7);
     enemyVector.add(cactus1);
     enemyVector.add(cactus2);
+    enemyVector.add(cactus3);
+    enemyVector.add(cactus4);
+    enemyVector.add(cactus5);
+    enemyVector.add(trap1);
+    enemyVector.add(trap2);
+    enemyVector.add(bullet1);
+    enemyVector.add(bullet2);
+    enemyVector.add(bullet3);
+    enemyVector.add(bird1);
     enemyController = new EnemyController(enemyVector, this);
   }
   
@@ -77,6 +90,19 @@ public class GamePanel extends javax.swing.JPanel {
     wall3 = new javax.swing.JLabel();
     cactus1 = new javax.swing.JLabel();
     cactus2 = new javax.swing.JLabel();
+    trap1 = new javax.swing.JLabel();
+    wall4 = new javax.swing.JLabel();
+    wall5 = new javax.swing.JLabel();
+    cactus3 = new javax.swing.JLabel();
+    cactus4 = new javax.swing.JLabel();
+    bullet1 = new javax.swing.JLabel();
+    bullet2 = new javax.swing.JLabel();
+    bullet3 = new javax.swing.JLabel();
+    wall6 = new javax.swing.JLabel();
+    wall7 = new javax.swing.JLabel();
+    cactus5 = new javax.swing.JLabel();
+    trap2 = new javax.swing.JLabel();
+    bird1 = new javax.swing.JLabel();
 
     setBackground(new java.awt.Color(102, 255, 204));
     setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
@@ -104,6 +130,7 @@ public class GamePanel extends javax.swing.JPanel {
     wall1.setPreferredSize(new java.awt.Dimension(35, 70));
     add(wall1);
     wall1.setBounds(715, 230, 35, 70);
+    wall1.getAccessibleContext().setAccessibleName("wall");
 
     wall2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
     wall2.setText("jLabel1");
@@ -141,6 +168,121 @@ public class GamePanel extends javax.swing.JPanel {
     add(cactus2);
     cactus2.setBounds(715, 230, 50, 70);
 
+    trap1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+    trap1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/gergaji.gif"))); // NOI18N
+    trap1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+    trap1.setName("trap"); // NOI18N
+    trap1.setRequestFocusEnabled(false);
+    add(trap1);
+    trap1.setBounds(715, 270, 70, 35);
+
+    wall4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
+    wall4.setText("jLabel1");
+    wall4.setMaximumSize(new java.awt.Dimension(35, 70));
+    wall4.setMinimumSize(new java.awt.Dimension(35, 70));
+    wall4.setName("wall"); // NOI18N
+    wall4.setPreferredSize(new java.awt.Dimension(35, 70));
+    add(wall4);
+    wall4.setBounds(715, 230, 35, 70);
+
+    wall5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
+    wall5.setText("jLabel1");
+    wall5.setMaximumSize(new java.awt.Dimension(35, 70));
+    wall5.setMinimumSize(new java.awt.Dimension(35, 70));
+    wall5.setName("wall"); // NOI18N
+    wall5.setPreferredSize(new java.awt.Dimension(35, 70));
+    add(wall5);
+    wall5.setBounds(715, 230, 35, 70);
+
+    cactus3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/cactus.png"))); // NOI18N
+    cactus3.setText("jLabel1");
+    cactus3.setMaximumSize(new java.awt.Dimension(35, 70));
+    cactus3.setMinimumSize(new java.awt.Dimension(35, 70));
+    cactus3.setName("cactus"); // NOI18N
+    cactus3.setPreferredSize(new java.awt.Dimension(35, 70));
+    add(cactus3);
+    cactus3.setBounds(715, 230, 50, 70);
+
+    cactus4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/cactus.png"))); // NOI18N
+    cactus4.setText("jLabel1");
+    cactus4.setMaximumSize(new java.awt.Dimension(35, 70));
+    cactus4.setMinimumSize(new java.awt.Dimension(35, 70));
+    cactus4.setName("cactus"); // NOI18N
+    cactus4.setPreferredSize(new java.awt.Dimension(35, 70));
+    add(cactus4);
+    cactus4.setBounds(715, 230, 50, 70);
+
+    bullet1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/bullet.png"))); // NOI18N
+    bullet1.setText("jLabel1");
+    bullet1.setMaximumSize(new java.awt.Dimension(38, 26));
+    bullet1.setMinimumSize(new java.awt.Dimension(38, 26));
+    bullet1.setName("bullet"); // NOI18N
+    bullet1.setPreferredSize(new java.awt.Dimension(38, 26));
+    add(bullet1);
+    bullet1.setBounds(715, 190, 38, 26);
+
+    bullet2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/bullet.png"))); // NOI18N
+    bullet2.setText("jLabel1");
+    bullet2.setMaximumSize(new java.awt.Dimension(38, 26));
+    bullet2.setMinimumSize(new java.awt.Dimension(38, 26));
+    bullet2.setName("bullet"); // NOI18N
+    bullet2.setPreferredSize(new java.awt.Dimension(38, 26));
+    add(bullet2);
+    bullet2.setBounds(715, 240, 38, 26);
+
+    bullet3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/bullet.png"))); // NOI18N
+    bullet3.setText("jLabel1");
+    bullet3.setMaximumSize(new java.awt.Dimension(38, 26));
+    bullet3.setMinimumSize(new java.awt.Dimension(38, 26));
+    bullet3.setName("bullet"); // NOI18N
+    bullet3.setPreferredSize(new java.awt.Dimension(38, 26));
+    add(bullet3);
+    bullet3.setBounds(715, 140, 38, 26);
+
+    wall6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
+    wall6.setText("jLabel1");
+    wall6.setMaximumSize(new java.awt.Dimension(35, 70));
+    wall6.setMinimumSize(new java.awt.Dimension(35, 70));
+    wall6.setName("wall"); // NOI18N
+    wall6.setPreferredSize(new java.awt.Dimension(35, 70));
+    add(wall6);
+    wall6.setBounds(715, 230, 35, 70);
+
+    wall7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
+    wall7.setText("jLabel1");
+    wall7.setMaximumSize(new java.awt.Dimension(35, 70));
+    wall7.setMinimumSize(new java.awt.Dimension(35, 70));
+    wall7.setName("wall"); // NOI18N
+    wall7.setPreferredSize(new java.awt.Dimension(35, 70));
+    add(wall7);
+    wall7.setBounds(715, 230, 35, 70);
+
+    cactus5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/cactus.png"))); // NOI18N
+    cactus5.setText("jLabel1");
+    cactus5.setMaximumSize(new java.awt.Dimension(35, 70));
+    cactus5.setMinimumSize(new java.awt.Dimension(35, 70));
+    cactus5.setName("cactus"); // NOI18N
+    cactus5.setPreferredSize(new java.awt.Dimension(35, 70));
+    add(cactus5);
+    cactus5.setBounds(715, 230, 50, 70);
+
+    trap2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+    trap2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/gergaji.gif"))); // NOI18N
+    trap2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+    trap2.setName("trap"); // NOI18N
+    trap2.setRequestFocusEnabled(false);
+    add(trap2);
+    trap2.setBounds(715, 270, 70, 35);
+
+    bird1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+    bird1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/bird.gif"))); // NOI18N
+    bird1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+    bird1.setName("bird"); // NOI18N
+    bird1.setRequestFocusEnabled(false);
+    add(bird1);
+    bird1.setBounds(715, 120, 48, 48);
+
+    getAccessibleContext().setAccessibleName("");
     getAccessibleContext().setAccessibleParent(this);
   }// </editor-fold>//GEN-END:initComponents
 
@@ -176,11 +318,24 @@ public class GamePanel extends javax.swing.JPanel {
   }
   
   // Variables declaration - do not modify//GEN-BEGIN:variables
+  private javax.swing.JLabel bird1;
+  private javax.swing.JLabel bullet1;
+  private javax.swing.JLabel bullet2;
+  private javax.swing.JLabel bullet3;
   private javax.swing.JLabel cactus1;
   private javax.swing.JLabel cactus2;
+  private javax.swing.JLabel cactus3;
+  private javax.swing.JLabel cactus4;
+  private javax.swing.JLabel cactus5;
   private javax.swing.JLabel player;
+  private javax.swing.JLabel trap1;
+  private javax.swing.JLabel trap2;
   private javax.swing.JLabel wall1;
   private javax.swing.JLabel wall2;
   private javax.swing.JLabel wall3;
+  private javax.swing.JLabel wall4;
+  private javax.swing.JLabel wall5;
+  private javax.swing.JLabel wall6;
+  private javax.swing.JLabel wall7;
   // End of variables declaration//GEN-END:variables
 }

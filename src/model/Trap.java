@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package model;
 
 /**
- *
+ * Test untuk Trap.
  * @author Rio
  */
 public class Trap extends Enemy {
   /*Kecepatan tambahan untuk jebakan*/
-  private static final int ADDITIONAL_SPEED = 3;
+  private static final int ADDITIONAL_SPEED = 2;
   
   /**
    * Konstruktor.
