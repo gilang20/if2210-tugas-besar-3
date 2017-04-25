@@ -10,8 +10,10 @@ package controller;
 import java.util.Random;
 import java.util.Vector;
 import javax.swing.JLabel;
+import model.Bullet;
 import model.Cactus;
 import model.Enemy;
+import model.Trap;
 import model.Wall;
 import view.GamePanel;
 
@@ -81,7 +83,21 @@ public class EnemyController extends Thread{
         cactus.setHeight(jlabelVector.get(i).getHeight());
         cactus.setWidth(jlabelVector.get(i).getWidth());
         enemyVector.add(cactus);
-      } else { //TODO objek selain tembok
+      } else if (jlabelVector.get(i).getName() == "bullet") {
+        Bullet bullet = new Bullet();
+        bullet.setAbsis(jlabelVector.get(i).getX());
+        bullet.setOrdinat(jlabelVector.get(i).getY());
+        bullet.setHeight(jlabelVector.get(i).getHeight());
+        bullet.setWidth(jlabelVector.get(i).getWidth());
+        enemyVector.add(bullet);
+      } else if (jlabelVector.get(i).getName() == "trap") {
+        Trap trap = new Trap();
+        trap.setAbsis(jlabelVector.get(i).getX());
+        trap.setOrdinat(jlabelVector.get(i).getY());
+        trap.setHeight(jlabelVector.get(i).getHeight());
+        trap.setWidth(jlabelVector.get(i).getWidth());
+        enemyVector.add(trap);
+      } else {
         Wall wall = new Wall();
         wall.setAbsis(jlabelVector.get(i).getX());
         wall.setOrdinat(jlabelVector.get(i).getY());
