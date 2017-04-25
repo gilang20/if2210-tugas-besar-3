@@ -50,5 +50,6 @@ public class StartController {
     startDialog.getParent().getGamePanel().getPlayerController().start();
     startDialog.getParent().getGamePanel().getEnemyController().start();
     startDialog.getParent().getScorePanel().getDataController().start();
+    startDialog.getParent().getGamePanel().getBackgroundController().start();
   }
 }
