@@ -1,14 +1,15 @@
-/**
- * Nama : Arno Alexander.
- * NIM : 13515141.
- * Kelompok : Komodo Dragon.
+/*
+ * File : Bird.java
+ * Nama : Gilang Ardyamandala Al Assyifa
+ * NIM  : 13515096
+ * Kel. : Komodo Dragon
  */
 
 package model;
 
 /**
  * Merepresentasikan burung.
- * @author Arno
+ * @author Gilang
  */
 public class Bird extends Enemy {
   /*Kecepatan tambahan untuk tembok*/
