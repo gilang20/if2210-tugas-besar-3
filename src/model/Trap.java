@@ -12,7 +12,7 @@ package model;
  */
 public class Trap extends Enemy {
   /*Kecepatan tambahan untuk jebakan*/
-  private static final int ADDITIONAL_SPEED = 2;
+  private static final int ADDITIONAL_SPEED = 1;
   
   /**
    * Konstruktor.

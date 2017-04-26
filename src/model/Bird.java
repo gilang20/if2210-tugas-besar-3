@@ -12,7 +12,7 @@ package model;
  */
 public class Bird extends Enemy{
   /*Kecepatan tambahan untuk tembok*/
-  private static final int ADDITIONAL_SPEED = -3;
+  private static final int ADDITIONAL_SPEED = -2;
   
   /**
    * Konstruktor.

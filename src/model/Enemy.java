@@ -13,9 +13,13 @@ package model;
 public abstract class Enemy implements Renderable{
 
   /**
+   * Nilai maksimum base speed (kecepatan maksimum musuh saat bergerak ke kiri).
+   */
+  public static final int MAX_BASE_SPEED = 12;
+  /**
    * Nilai minimum base speed (kecepatan minimum musuh saat bergerak ke kiri).
    */
-  public static final int MIN_BASE_SPEED = 10;
+  public static final int MIN_BASE_SPEED = 5;
   /*Absis*/
   private int absis;
   /*Ordinat*/

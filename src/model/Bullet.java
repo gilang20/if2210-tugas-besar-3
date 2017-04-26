@@ -12,7 +12,7 @@ package model;
  */
 public class Bullet extends Enemy {
   /*Kecepatan tambahan untuk peluru*/
-  private static final int ADDITIONAL_SPEED = 5;
+  private static final int ADDITIONAL_SPEED = 3;
   
   /**
    * Konstruktor.

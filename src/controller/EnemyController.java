@@ -32,6 +32,10 @@ public class EnemyController extends Thread{
    */
   public static final int MIN_DISTANCE_BETWEEN_ENEMY = 461;
   /**
+   * Pertambahan MIN_DISTANCE_BETWEEN_ENEMY tiap pertambahan kecepatan.
+   */
+  public static final int DISTANCE_BETWEEN_ENEMY_RESOLUTION = 31;
+  /**
    * Absis dari enemy yang tidak aktif.
    */
   public static final int ABSIS_FOR_INACTIVE_ENEMY = 725;
@@ -52,6 +56,8 @@ public class EnemyController extends Thread{
   private Random random;
   /*Referensi ke GamePanel*/
   private GamePanel gamePanel;
+  /*Waktu antar pertambahan kecepatan*/
+  private long timeBetweenAcceleration;
   
   /**
    * Konstruktor.
@@ -60,6 +66,7 @@ public class EnemyController extends Thread{
    */
   public EnemyController(Vector<JLabel> jlabelVector, 
       GamePanel gamePanel) {
+    timeBetweenAcceleration = 0;
     this.gamePanel = gamePanel;
     random = new Random(System.currentTimeMillis() / 2 + System.nanoTime() / 2);
     numberOfActiveEnemy = 0;
@@ -125,14 +132,15 @@ public class EnemyController extends Thread{
       if (activeEnemy[i] >= 0) {
         isThereFarRightEnemy = jlabelVector.get(activeEnemy[i]).getParent()
             .getWidth() - enemyVector.get(activeEnemy[i]).getAbsis() 
-            < MIN_DISTANCE_BETWEEN_ENEMY;
+            < MIN_DISTANCE_BETWEEN_ENEMY + (enemyVector.get(i).getBaseSpeed()
+            - Enemy.MIN_BASE_SPEED) * DISTANCE_BETWEEN_ENEMY_RESOLUTION;
         if (isThereFarRightEnemy) {
           break;
         }
       }
     }
     if (!isThereFarRightEnemy) {
-      int isAddNextEnemy = random.nextInt(20);
+      int isAddNextEnemy = random.nextInt(35);
       if (isAddNextEnemy == 0) {
         int indexOfNewActivatedEnemy = random.nextInt(enemyVector.size());
         int count = 0;
@@ -166,10 +174,21 @@ public class EnemyController extends Thread{
       if (activeEnemy[i] >= 0) {
         int absis = enemyVector.get(activeEnemy[i]).getAbsis();
         absis -= (enemyVector.get(activeEnemy[i]).getBaseSpeed() 
-            + enemyVector.get(activeEnemy[i]).getAdditionalSpeed()) / 4;
+            + enemyVector.get(activeEnemy[i]).getAdditionalSpeed());
         enemyVector.get(activeEnemy[i]).setAbsis(absis);
         jlabelVector.get(activeEnemy[i]).setLocation(enemyVector.get(activeEnemy[i])
             .getAbsis(), enemyVector.get(activeEnemy[i]).getOrdinat());
+      }
+    }
+    long timeNow = System.currentTimeMillis();
+    //System.out.println(timeNow - timeBetweenAcceleration);
+    if (timeNow - timeBetweenAcceleration > 15000) {
+      timeBetweenAcceleration = timeNow;
+      if (enemyVector.get(0).getBaseSpeed() < Enemy.MAX_BASE_SPEED) {
+        System.out.println("go faster " + enemyVector.get(0).getBaseSpeed());
+        for (int i = 0; i < enemyVector.size(); i++) {
+          enemyVector.get(i).setBaseSpeed(enemyVector.get(i).getBaseSpeed() + 1);
+        }
       }
     }
   }
@@ -226,9 +245,10 @@ public class EnemyController extends Thread{
   
   @Override
   public void run() {
+    timeBetweenAcceleration = System.currentTimeMillis();
     while (true) {
       try {
-        sleep(5);
+        sleep(12);
       } catch (InterruptedException ex) {
         System.out.println("Interrupted Exception");
       }
