@@ -63,8 +63,8 @@ public class ScorePanel extends javax.swing.JPanel {
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
     this.setLayout(layout);
     layout.setHorizontalGroup(
-      layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
         .addGap(106, 106, 106)
         .addComponent(level)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
@@ -74,8 +74,8 @@ public class ScorePanel extends javax.swing.JPanel {
         .addGap(156, 156, 156))
     );
     layout.setVerticalGroup(
-      layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(layout.createSequentialGroup()
+        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(layout.createSequentialGroup()
         .addGap(15, 15, 15)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(score)
@@ -83,7 +83,8 @@ public class ScorePanel extends javax.swing.JPanel {
           .addComponent(level))
         .addContainerGap(16, Short.MAX_VALUE))
     );
-  }// </editor-fold>//GEN-END:initComponents
+  }
+  // </editor-fold>//GEN-END:initComponents
 
   /**
    * Getter DataController.

@@ -6,8 +6,8 @@
 
 package model;
 
-import javax.sound.sampled.*;
 import java.io.File;
+import javax.sound.sampled.*;
 
 /**
  * Merepresentasikan suara.
@@ -30,8 +30,6 @@ public class Sound {
    */
   public synchronized void playSound() {
     new Thread(new Runnable() {
-    // The wrapper thread is unnecessary, unless it blocks on the
-    // Clip finishing; see comments.
       @Override
       public void run() {
         try {

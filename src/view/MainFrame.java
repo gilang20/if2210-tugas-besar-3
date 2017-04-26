@@ -64,35 +64,40 @@ public class MainFrame extends javax.swing.JFrame {
     javax.swing.GroupLayout groundLayout = new javax.swing.GroupLayout(ground);
     ground.setLayout(groundLayout);
     groundLayout.setHorizontalGroup(
-      groundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 0, Short.MAX_VALUE)
+        groundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGap(0, 0, Short.MAX_VALUE)
     );
     groundLayout.setVerticalGroup(
-      groundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 50, Short.MAX_VALUE)
+        groundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGap(0, 50, Short.MAX_VALUE)
     );
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
-      layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addComponent(ground, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-      .addComponent(gamePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-      .addComponent(scorePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addComponent(ground, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing
+          .GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addComponent(gamePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing
+          .GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addComponent(scorePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing
+          .GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
     );
     layout.setVerticalGroup(
-      layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-        .addComponent(scorePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addGap(0, 0, 0)
-        .addComponent(gamePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addGap(0, 0, 0)
-        .addComponent(ground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+        .addComponent(scorePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing
+          .GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addGap(0, 0, 0)
+        .addComponent(gamePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing
+          .GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addGap(0, 0, 0)
+        .addComponent(ground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing
+          .GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(0, 0, Short.MAX_VALUE))
     );
 
     pack();
-  }// </editor-fold>//GEN-END:initComponents
+  }
+  // </editor-fold>//GEN-END:initComponents
 
   /**
    * Setting tambahan untuk komponen.

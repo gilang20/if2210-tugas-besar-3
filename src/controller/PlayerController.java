@@ -44,7 +44,8 @@ public class PlayerController extends Thread {
    * Membuat pemain melompat.
    */
   public void jump() {
-    int initialOrdinat = playerModel.getOrdinat();
+    int initialOrdinat;
+    initialOrdinat = playerModel.getOrdinat();
     int verticalDelay = 92;
     Sound sound = new Sound("src/assets/Jump.wav");
     sound.playSound();

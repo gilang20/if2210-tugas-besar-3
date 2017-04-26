@@ -10,7 +10,7 @@ package model;
  * Merepresentasikan musuh.
  * @author Asus
  */
-public abstract class Enemy implements Renderable{
+public abstract class Enemy implements Renderable {
 
   /**
    * Nilai maksimum base speed (kecepatan maksimum musuh saat bergerak ke kiri).

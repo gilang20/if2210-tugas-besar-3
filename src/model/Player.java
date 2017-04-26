@@ -10,7 +10,7 @@ package model;
  * Merepresentasikan player yang dapat dikontrol.
  * @author Asus
  */
-public class Player implements Renderable{
+public class Player implements Renderable {
   /*Ordinat pemain saat menginjak tanah*/
   private int defaultOrdinat; 
   /*Absis*/

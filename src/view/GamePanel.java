@@ -6,9 +6,9 @@
 
 package view;
 
+import controller.BackgroundController;
 import controller.EnemyController;
 import controller.PlayerController;
-import controller.BackgroundController;
 import java.util.Vector;
 import javax.swing.JLabel;
 
@@ -112,7 +112,8 @@ public class GamePanel extends javax.swing.JPanel {
     setPreferredSize(new java.awt.Dimension(714, 300));
     setLayout(null);
 
-    player.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/komodo.gif"))); // NOI18N
+    player.setIcon(new javax.swing.ImageIcon(getClass()
+        .getResource("/assets/komodo.gif"))); // NOI18N
     player.setName("player"); // NOI18N
     player.addKeyListener(new java.awt.event.KeyAdapter() {
       public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -150,7 +151,8 @@ public class GamePanel extends javax.swing.JPanel {
     add(wall3);
     wall3.setBounds(725, 230, 35, 70);
 
-    cactus1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/cactus.png"))); // NOI18N
+    cactus1.setIcon(new javax.swing.ImageIcon(getClass()
+        .getResource("/assets/cactus.png"))); // NOI18N
     cactus1.setText("jLabel1");
     cactus1.setMaximumSize(new java.awt.Dimension(35, 70));
     cactus1.setMinimumSize(new java.awt.Dimension(35, 70));
@@ -159,7 +161,8 @@ public class GamePanel extends javax.swing.JPanel {
     add(cactus1);
     cactus1.setBounds(725, 230, 50, 70);
 
-    cactus2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/cactus.png"))); // NOI18N
+    cactus2.setIcon(new javax.swing.ImageIcon(getClass()
+        .getResource("/assets/cactus.png"))); // NOI18N
     cactus2.setText("jLabel1");
     cactus2.setMaximumSize(new java.awt.Dimension(35, 70));
     cactus2.setMinimumSize(new java.awt.Dimension(35, 70));
@@ -169,14 +172,16 @@ public class GamePanel extends javax.swing.JPanel {
     cactus2.setBounds(725, 230, 50, 70);
 
     trap1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    trap1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/gergaji.gif"))); // NOI18N
+    trap1.setIcon(new javax.swing.ImageIcon(getClass()
+        .getResource("/assets/gergaji.gif"))); // NOI18N
     trap1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
     trap1.setName("trap"); // NOI18N
     trap1.setRequestFocusEnabled(false);
     add(trap1);
     trap1.setBounds(725, 270, 70, 35);
 
-    wall4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
+    wall4.setIcon(new javax.swing.ImageIcon(getClass()
+        .getResource("/assets/wall.png"))); // NOI18N
     wall4.setText("jLabel1");
     wall4.setMaximumSize(new java.awt.Dimension(35, 70));
     wall4.setMinimumSize(new java.awt.Dimension(35, 70));
@@ -185,7 +190,8 @@ public class GamePanel extends javax.swing.JPanel {
     add(wall4);
     wall4.setBounds(725, 230, 35, 70);
 
-    wall5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
+    wall5.setIcon(new javax.swing.ImageIcon(getClass()
+        .getResource("/assets/wall.png"))); // NOI18N
     wall5.setText("jLabel1");
     wall5.setMaximumSize(new java.awt.Dimension(35, 70));
     wall5.setMinimumSize(new java.awt.Dimension(35, 70));
@@ -194,7 +200,8 @@ public class GamePanel extends javax.swing.JPanel {
     add(wall5);
     wall5.setBounds(725, 230, 35, 70);
 
-    cactus3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/cactus.png"))); // NOI18N
+    cactus3.setIcon(new javax.swing.ImageIcon(getClass()
+        .getResource("/assets/cactus.png"))); // NOI18N
     cactus3.setText("jLabel1");
     cactus3.setMaximumSize(new java.awt.Dimension(35, 70));
     cactus3.setMinimumSize(new java.awt.Dimension(35, 70));
@@ -203,7 +210,8 @@ public class GamePanel extends javax.swing.JPanel {
     add(cactus3);
     cactus3.setBounds(725, 230, 50, 70);
 
-    cactus4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/cactus.png"))); // NOI18N
+    cactus4.setIcon(new javax.swing.ImageIcon(getClass()
+        .getResource("/assets/cactus.png"))); // NOI18N
     cactus4.setText("jLabel1");
     cactus4.setMaximumSize(new java.awt.Dimension(35, 70));
     cactus4.setMinimumSize(new java.awt.Dimension(35, 70));
@@ -212,7 +220,8 @@ public class GamePanel extends javax.swing.JPanel {
     add(cactus4);
     cactus4.setBounds(725, 230, 50, 70);
 
-    bullet1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/bullet.png"))); // NOI18N
+    bullet1.setIcon(new javax.swing.ImageIcon(getClass()
+        .getResource("/assets/bullet.png"))); // NOI18N
     bullet1.setText("jLabel1");
     bullet1.setMaximumSize(new java.awt.Dimension(38, 26));
     bullet1.setMinimumSize(new java.awt.Dimension(38, 26));
@@ -221,7 +230,8 @@ public class GamePanel extends javax.swing.JPanel {
     add(bullet1);
     bullet1.setBounds(725, 190, 38, 26);
 
-    bullet2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/bullet.png"))); // NOI18N
+    bullet2.setIcon(new javax.swing.ImageIcon(getClass()
+        .getResource("/assets/bullet.png"))); // NOI18N
     bullet2.setText("jLabel1");
     bullet2.setMaximumSize(new java.awt.Dimension(38, 26));
     bullet2.setMinimumSize(new java.awt.Dimension(38, 26));
@@ -230,7 +240,8 @@ public class GamePanel extends javax.swing.JPanel {
     add(bullet2);
     bullet2.setBounds(725, 240, 38, 26);
 
-    bullet3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/bullet.png"))); // NOI18N
+    bullet3.setIcon(new javax.swing.ImageIcon(getClass()
+        .getResource("/assets/bullet.png"))); // NOI18N
     bullet3.setText("jLabel1");
     bullet3.setMaximumSize(new java.awt.Dimension(38, 26));
     bullet3.setMinimumSize(new java.awt.Dimension(38, 26));
@@ -239,7 +250,8 @@ public class GamePanel extends javax.swing.JPanel {
     add(bullet3);
     bullet3.setBounds(725, 140, 38, 26);
 
-    wall6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
+    wall6.setIcon(new javax.swing.ImageIcon(getClass()
+        .getResource("/assets/wall.png"))); // NOI18N
     wall6.setText("jLabel1");
     wall6.setMaximumSize(new java.awt.Dimension(35, 70));
     wall6.setMinimumSize(new java.awt.Dimension(35, 70));
@@ -248,7 +260,8 @@ public class GamePanel extends javax.swing.JPanel {
     add(wall6);
     wall6.setBounds(725, 230, 35, 70);
 
-    wall7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
+    wall7.setIcon(new javax.swing.ImageIcon(getClass()
+        .getResource("/assets/wall.png"))); // NOI18N
     wall7.setText("jLabel1");
     wall7.setMaximumSize(new java.awt.Dimension(35, 70));
     wall7.setMinimumSize(new java.awt.Dimension(35, 70));
@@ -257,7 +270,8 @@ public class GamePanel extends javax.swing.JPanel {
     add(wall7);
     wall7.setBounds(725, 230, 35, 70);
 
-    cactus5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/cactus.png"))); // NOI18N
+    cactus5.setIcon(new javax.swing.ImageIcon(getClass()
+        .getResource("/assets/cactus.png"))); // NOI18N
     cactus5.setText("jLabel1");
     cactus5.setMaximumSize(new java.awt.Dimension(35, 70));
     cactus5.setMinimumSize(new java.awt.Dimension(35, 70));
@@ -267,7 +281,8 @@ public class GamePanel extends javax.swing.JPanel {
     cactus5.setBounds(725, 230, 50, 70);
 
     trap2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    trap2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/gergaji.gif"))); // NOI18N
+    trap2.setIcon(new javax.swing.ImageIcon(getClass()
+        .getResource("/assets/gergaji.gif"))); // NOI18N
     trap2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
     trap2.setName("trap"); // NOI18N
     trap2.setRequestFocusEnabled(false);
@@ -275,7 +290,8 @@ public class GamePanel extends javax.swing.JPanel {
     trap2.setBounds(725, 270, 70, 35);
 
     bird1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-    bird1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/bird.gif"))); // NOI18N
+    bird1.setIcon(new javax.swing.ImageIcon(getClass()
+        .getResource("/assets/bird.gif"))); // NOI18N
     bird1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
     bird1.setName("bird"); // NOI18N
     bird1.setRequestFocusEnabled(false);
@@ -284,14 +300,17 @@ public class GamePanel extends javax.swing.JPanel {
 
     getAccessibleContext().setAccessibleName("");
     getAccessibleContext().setAccessibleParent(this);
-  }// </editor-fold>//GEN-END:initComponents
+  }
+  // </editor-fold>//GEN-END:initComponents
 
-  private void playerKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_playerKeyPressed
+  private void playerKeyPressed(java.awt.event.KeyEvent evt) {
+    //GEN-FIRST:event_playerKeyPressed
     if (!playerController.isStartJumping && evt.getExtendedKeyCode() == 38) {
       System.out.println("up");
       playerController.isStartJumping = true;
     }
-  }//GEN-LAST:event_playerKeyPressed
+  }
+  //GEN-LAST:event_playerKeyPressed
 
   /**
    * Getter PlayerController.

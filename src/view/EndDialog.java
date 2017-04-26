@@ -75,35 +75,45 @@ public class EndDialog extends javax.swing.JDialog {
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
-      layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addComponent(gameOver, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
-      .addComponent(score, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-      .addGroup(layout.createSequentialGroup()
+        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addComponent(gameOver, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+        .addComponent(score, javax.swing.GroupLayout.DEFAULT_SIZE, 
+        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addGroup(layout.createSequentialGroup()
         .addContainerGap()
-        .addComponent(okButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addComponent(okButton, javax.swing.GroupLayout.DEFAULT_SIZE, 
+        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         .addContainerGap())
-      .addComponent(highScore, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addComponent(highScore, javax.swing.GroupLayout.DEFAULT_SIZE, 
+        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
     );
     layout.setVerticalGroup(
-      layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-        .addComponent(gameOver, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+        .addComponent(gameOver, javax.swing.GroupLayout.PREFERRED_SIZE,
+        40, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(0, 0, 0)
-        .addComponent(score, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addComponent(score, javax.swing.GroupLayout.PREFERRED_SIZE, 40, 
+        javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(2, 2, 2)
-        .addComponent(highScore, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+        .addComponent(highScore, javax.swing.GroupLayout.PREFERRED_SIZE, 40, 
+        javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 
+        18, Short.MAX_VALUE)
         .addComponent(okButton)
         .addContainerGap())
     );
 
     pack();
-  }// </editor-fold>//GEN-END:initComponents
+  }
+  // </editor-fold>//GEN-END:initComponents
 
-  private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okButtonActionPerformed
+  private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {
+    //GEN-FIRST:event_okButtonActionPerformed
     System.out.println("ok");
     System.exit(0);
-  }//GEN-LAST:event_okButtonActionPerformed
+  }
+  //GEN-LAST:event_okButtonActionPerformed
 
   /**
    * Getter parent.

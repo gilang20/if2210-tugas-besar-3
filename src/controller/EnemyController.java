@@ -22,7 +22,7 @@ import view.GamePanel;
  * Controller untuk musuh.
  * @author Asus
  */
-public class EnemyController extends Thread{
+public class EnemyController extends Thread {
   /**
    * Banyak maksimum dari enemy yang ditampilkan pada layar.
    */
@@ -70,42 +70,42 @@ public class EnemyController extends Thread{
     this.gamePanel = gamePanel;
     random = new Random(System.currentTimeMillis() / 2 + System.nanoTime() / 2);
     numberOfActiveEnemy = 0;
-    activeEnemy= new int[MAX_NUMBER_OF_ACTIVE_ENEMY];
+    activeEnemy = new int[MAX_NUMBER_OF_ACTIVE_ENEMY];
     for (int i = 0; i < MAX_NUMBER_OF_ACTIVE_ENEMY; i++) {
       activeEnemy[i] = -1;
     }
     this.jlabelVector = jlabelVector;
     enemyVector = new Vector<>();
     for (int i = 0; i < jlabelVector.size(); i++) {
-      if (jlabelVector.get(i).getName() == "wall") {
+      if ("wall".equals(jlabelVector.get(i).getName())) {
         Wall wall = new Wall();
         wall.setAbsis(jlabelVector.get(i).getX());
         wall.setOrdinat(jlabelVector.get(i).getY());
         wall.setHeight(jlabelVector.get(i).getHeight());
         wall.setWidth(jlabelVector.get(i).getWidth());
         enemyVector.add(wall);
-      } else if (jlabelVector.get(i).getName() == "cactus") {
+      } else if ("cactus".equals(jlabelVector.get(i).getName())) {
         Cactus cactus = new Cactus();
         cactus.setAbsis(jlabelVector.get(i).getX());
         cactus.setOrdinat(jlabelVector.get(i).getY());
         cactus.setHeight(jlabelVector.get(i).getHeight());
         cactus.setWidth(jlabelVector.get(i).getWidth());
         enemyVector.add(cactus);
-      } else if (jlabelVector.get(i).getName() == "bullet") {
+      } else if ("bullet".equals(jlabelVector.get(i).getName())) {
         Bullet bullet = new Bullet();
         bullet.setAbsis(jlabelVector.get(i).getX());
         bullet.setOrdinat(jlabelVector.get(i).getY());
         bullet.setHeight(jlabelVector.get(i).getHeight());
         bullet.setWidth(jlabelVector.get(i).getWidth());
         enemyVector.add(bullet);
-      } else if (jlabelVector.get(i).getName() == "trap") {
+      } else if ("trap".equals(jlabelVector.get(i).getName())) {
         Trap trap = new Trap();
         trap.setAbsis(jlabelVector.get(i).getX());
         trap.setOrdinat(jlabelVector.get(i).getY());
         trap.setHeight(jlabelVector.get(i).getHeight());
         trap.setWidth(jlabelVector.get(i).getWidth());
         enemyVector.add(trap);
-      } else if (jlabelVector.get(i).getName() == "bird") {
+      } else if ("bird".equals(jlabelVector.get(i).getName())) {
         Bird bird = new Bird();
         bird.setAbsis(jlabelVector.get(i).getX());
         bird.setOrdinat(jlabelVector.get(i).getY());

@@ -10,7 +10,7 @@ package model;
  * Merepresentasikan burung.
  * @author Arno
  */
-public class Bird extends Enemy{
+public class Bird extends Enemy {
   /*Kecepatan tambahan untuk tembok*/
   private static final int ADDITIONAL_SPEED = -2;
   

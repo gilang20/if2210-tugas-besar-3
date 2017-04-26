@@ -73,19 +73,22 @@ public class StartDialog extends javax.swing.JDialog {
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
-      layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addComponent(welcome, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
-      .addComponent(highScoreDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-        .addContainerGap()
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-          .addComponent(highScore, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-          .addComponent(start, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        .addContainerGap())
+          layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(welcome, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+          .addComponent(highScoreDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing
+            .GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+          .addContainerGap()
+          .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+          .addComponent(highScore, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing
+            .GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addComponent(start, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing
+            .GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+          .addContainerGap())
     );
     layout.setVerticalGroup(
-      layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(layout.createSequentialGroup()
+        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(layout.createSequentialGroup()
         .addComponent(welcome)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addComponent(start)
@@ -96,17 +99,22 @@ public class StartDialog extends javax.swing.JDialog {
     );
 
     pack();
-  }// </editor-fold>//GEN-END:initComponents
+  }
+  // </editor-fold>//GEN-END:initComponents
 
-  private void startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startActionPerformed
+  private void startActionPerformed(java.awt.event.ActionEvent evt) {
+    //GEN-FIRST:event_startActionPerformed
     System.out.println("start");
     startController.startGame();
-  }//GEN-LAST:event_startActionPerformed
+  }
+  //GEN-LAST:event_startActionPerformed
 
-  private void highScoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_highScoreActionPerformed
+  private void highScoreActionPerformed(java.awt.event.ActionEvent evt) {
+    //GEN-FIRST:event_highScoreActionPerformed
     System.out.println("high");
     startController.displayHighScore();
-  }//GEN-LAST:event_highScoreActionPerformed
+  }
+  //GEN-LAST:event_highScoreActionPerformed
 
   /**
    * Getter highScoreDisplay.

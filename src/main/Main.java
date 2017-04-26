@@ -14,7 +14,7 @@ import view.MainFrame;
  */
 public class Main {
 
- /**
+  /**
    * Program utama.
    * @param args argumen
    */
