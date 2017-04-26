@@ -6,8 +6,6 @@
 
 package controller;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import model.GameState;
 import model.Sound;
 import view.EndDialog;
@@ -32,6 +30,9 @@ public class EndController {
    * Menghentikan thread-thread dari game.
    */
   public void endGame() {
+    endDialog.getParent().getGamePanel().getPlayerController().stop();
+    endDialog.getParent().getScorePanel().getDataController().stop();
+    endDialog.getParent().getGamePanel().getBackgroundController().stop();
     Sound sound = new Sound("src/assets/Die.wav");
     sound.playSound();
     endDialog.getParent().setVisible(false);
@@ -39,5 +40,6 @@ public class EndController {
         .getScorePanel().getDataController().getGameStateModel().getScore());
     endDialog.getHighScore().setText("High Score = " + GameState.getHighScore());
     endDialog.setVisible(true);
+    endDialog.getParent().getGamePanel().getEnemyController().stop();
   }
 }
