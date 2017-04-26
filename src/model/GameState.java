@@ -19,6 +19,7 @@ public class GameState {
   
   /**
    * Konstruktor.
+   * @throws java.io.FileNotFoundException exception
    */
   public GameState() throws FileNotFoundException {
     score = 0;
@@ -76,6 +77,7 @@ public class GameState {
   
   /**
    * Loader data highScore.
+   * @throws java.io.FileNotFoundException exception
    */
   public void loadHighScore() throws FileNotFoundException{
     Scanner fileScanner = new Scanner(new File("src/data/HighScore.txt"));
@@ -84,6 +86,7 @@ public class GameState {
   
   /**
    * Saving data highScore.
+   * @throws java.io.FileNotFoundException exception
    */
   public void saveHighScore() throws FileNotFoundException{
     File Fileout = new File("src/data/HighScore.txt");
