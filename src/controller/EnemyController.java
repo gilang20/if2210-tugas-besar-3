@@ -62,7 +62,7 @@ public class EnemyController extends Thread{
   /**
    * Konstruktor.
    * @param jlabelVector vector of JLabel
-   * @param playerController referensi ke PlayerController
+   * @param gamePanel panel game
    */
   public EnemyController(Vector<JLabel> jlabelVector, 
       GamePanel gamePanel) {
