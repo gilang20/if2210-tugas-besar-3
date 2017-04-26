@@ -129,7 +129,7 @@ public class GamePanel extends javax.swing.JPanel {
     wall1.setName("wall"); // NOI18N
     wall1.setPreferredSize(new java.awt.Dimension(35, 70));
     add(wall1);
-    wall1.setBounds(715, 230, 35, 70);
+    wall1.setBounds(725, 230, 35, 70);
     wall1.getAccessibleContext().setAccessibleName("wall");
 
     wall2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
@@ -139,7 +139,7 @@ public class GamePanel extends javax.swing.JPanel {
     wall2.setName("wall"); // NOI18N
     wall2.setPreferredSize(new java.awt.Dimension(35, 70));
     add(wall2);
-    wall2.setBounds(715, 230, 35, 70);
+    wall2.setBounds(725, 230, 35, 70);
 
     wall3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
     wall3.setText("jLabel1");
@@ -148,7 +148,7 @@ public class GamePanel extends javax.swing.JPanel {
     wall3.setName("wall"); // NOI18N
     wall3.setPreferredSize(new java.awt.Dimension(35, 70));
     add(wall3);
-    wall3.setBounds(715, 230, 35, 70);
+    wall3.setBounds(725, 230, 35, 70);
 
     cactus1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/cactus.png"))); // NOI18N
     cactus1.setText("jLabel1");
@@ -157,7 +157,7 @@ public class GamePanel extends javax.swing.JPanel {
     cactus1.setName("cactus"); // NOI18N
     cactus1.setPreferredSize(new java.awt.Dimension(35, 70));
     add(cactus1);
-    cactus1.setBounds(715, 230, 50, 70);
+    cactus1.setBounds(725, 230, 50, 70);
 
     cactus2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/cactus.png"))); // NOI18N
     cactus2.setText("jLabel1");
@@ -166,7 +166,7 @@ public class GamePanel extends javax.swing.JPanel {
     cactus2.setName("cactus"); // NOI18N
     cactus2.setPreferredSize(new java.awt.Dimension(35, 70));
     add(cactus2);
-    cactus2.setBounds(715, 230, 50, 70);
+    cactus2.setBounds(725, 230, 50, 70);
 
     trap1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     trap1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/gergaji.gif"))); // NOI18N
@@ -174,7 +174,7 @@ public class GamePanel extends javax.swing.JPanel {
     trap1.setName("trap"); // NOI18N
     trap1.setRequestFocusEnabled(false);
     add(trap1);
-    trap1.setBounds(715, 270, 70, 35);
+    trap1.setBounds(725, 270, 70, 35);
 
     wall4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
     wall4.setText("jLabel1");
@@ -183,7 +183,7 @@ public class GamePanel extends javax.swing.JPanel {
     wall4.setName("wall"); // NOI18N
     wall4.setPreferredSize(new java.awt.Dimension(35, 70));
     add(wall4);
-    wall4.setBounds(715, 230, 35, 70);
+    wall4.setBounds(725, 230, 35, 70);
 
     wall5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
     wall5.setText("jLabel1");
@@ -192,7 +192,7 @@ public class GamePanel extends javax.swing.JPanel {
     wall5.setName("wall"); // NOI18N
     wall5.setPreferredSize(new java.awt.Dimension(35, 70));
     add(wall5);
-    wall5.setBounds(715, 230, 35, 70);
+    wall5.setBounds(725, 230, 35, 70);
 
     cactus3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/cactus.png"))); // NOI18N
     cactus3.setText("jLabel1");
@@ -201,7 +201,7 @@ public class GamePanel extends javax.swing.JPanel {
     cactus3.setName("cactus"); // NOI18N
     cactus3.setPreferredSize(new java.awt.Dimension(35, 70));
     add(cactus3);
-    cactus3.setBounds(715, 230, 50, 70);
+    cactus3.setBounds(725, 230, 50, 70);
 
     cactus4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/cactus.png"))); // NOI18N
     cactus4.setText("jLabel1");
@@ -210,7 +210,7 @@ public class GamePanel extends javax.swing.JPanel {
     cactus4.setName("cactus"); // NOI18N
     cactus4.setPreferredSize(new java.awt.Dimension(35, 70));
     add(cactus4);
-    cactus4.setBounds(715, 230, 50, 70);
+    cactus4.setBounds(725, 230, 50, 70);
 
     bullet1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/bullet.png"))); // NOI18N
     bullet1.setText("jLabel1");
@@ -219,7 +219,7 @@ public class GamePanel extends javax.swing.JPanel {
     bullet1.setName("bullet"); // NOI18N
     bullet1.setPreferredSize(new java.awt.Dimension(38, 26));
     add(bullet1);
-    bullet1.setBounds(715, 190, 38, 26);
+    bullet1.setBounds(725, 190, 38, 26);
 
     bullet2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/bullet.png"))); // NOI18N
     bullet2.setText("jLabel1");
@@ -228,7 +228,7 @@ public class GamePanel extends javax.swing.JPanel {
     bullet2.setName("bullet"); // NOI18N
     bullet2.setPreferredSize(new java.awt.Dimension(38, 26));
     add(bullet2);
-    bullet2.setBounds(715, 240, 38, 26);
+    bullet2.setBounds(725, 240, 38, 26);
 
     bullet3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/bullet.png"))); // NOI18N
     bullet3.setText("jLabel1");
@@ -237,7 +237,7 @@ public class GamePanel extends javax.swing.JPanel {
     bullet3.setName("bullet"); // NOI18N
     bullet3.setPreferredSize(new java.awt.Dimension(38, 26));
     add(bullet3);
-    bullet3.setBounds(715, 140, 38, 26);
+    bullet3.setBounds(725, 140, 38, 26);
 
     wall6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
     wall6.setText("jLabel1");
@@ -246,7 +246,7 @@ public class GamePanel extends javax.swing.JPanel {
     wall6.setName("wall"); // NOI18N
     wall6.setPreferredSize(new java.awt.Dimension(35, 70));
     add(wall6);
-    wall6.setBounds(715, 230, 35, 70);
+    wall6.setBounds(725, 230, 35, 70);
 
     wall7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/wall.png"))); // NOI18N
     wall7.setText("jLabel1");
@@ -255,7 +255,7 @@ public class GamePanel extends javax.swing.JPanel {
     wall7.setName("wall"); // NOI18N
     wall7.setPreferredSize(new java.awt.Dimension(35, 70));
     add(wall7);
-    wall7.setBounds(715, 230, 35, 70);
+    wall7.setBounds(725, 230, 35, 70);
 
     cactus5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/cactus.png"))); // NOI18N
     cactus5.setText("jLabel1");
@@ -264,7 +264,7 @@ public class GamePanel extends javax.swing.JPanel {
     cactus5.setName("cactus"); // NOI18N
     cactus5.setPreferredSize(new java.awt.Dimension(35, 70));
     add(cactus5);
-    cactus5.setBounds(715, 230, 50, 70);
+    cactus5.setBounds(725, 230, 50, 70);
 
     trap2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     trap2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/gergaji.gif"))); // NOI18N
@@ -272,7 +272,7 @@ public class GamePanel extends javax.swing.JPanel {
     trap2.setName("trap"); // NOI18N
     trap2.setRequestFocusEnabled(false);
     add(trap2);
-    trap2.setBounds(715, 270, 70, 35);
+    trap2.setBounds(725, 270, 70, 35);
 
     bird1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     bird1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/bird.gif"))); // NOI18N
@@ -280,7 +280,7 @@ public class GamePanel extends javax.swing.JPanel {
     bird1.setName("bird"); // NOI18N
     bird1.setRequestFocusEnabled(false);
     add(bird1);
-    bird1.setBounds(715, 120, 48, 48);
+    bird1.setBounds(725, 120, 48, 48);
 
     getAccessibleContext().setAccessibleName("");
     getAccessibleContext().setAccessibleParent(this);
