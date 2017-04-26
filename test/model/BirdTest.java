@@ -45,7 +45,7 @@ public class BirdTest {
   public void testGetAdditionalSpeed() {
     System.out.println("getAdditionalSpeed");
     Bird instance = new Bird();
-    int expResult = -3;
+    int expResult = -2;
     int result = instance.getAdditionalSpeed();
     assertEquals(expResult, result);
   }

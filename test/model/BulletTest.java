@@ -44,7 +44,7 @@ public class BulletTest {
   public void testGetAdditionalSpeed() {
     System.out.println("getAdditionalSpeed");
     Bullet instance = new Bullet();
-    int expResult = 5;
+    int expResult = 3;
     int result = instance.getAdditionalSpeed();
     assertEquals(expResult, result);
   }

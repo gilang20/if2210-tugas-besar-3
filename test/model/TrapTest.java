@@ -45,7 +45,7 @@ public class TrapTest {
   public void testGetAdditionalSpeed() {
     System.out.println("getAdditionalSpeed");
     Trap instance = new Trap();
-    int expResult = 2;
+    int expResult = 1;
     int result = instance.getAdditionalSpeed();
     assertEquals(expResult, result);
   }
