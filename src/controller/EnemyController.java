@@ -34,7 +34,7 @@ public class EnemyController extends Thread{
   /**
    * Absis dari enemy yang tidak aktif.
    */
-  public static final int ABSIS_FOR_INACTIVE_ENEMY = 715;
+  public static final int ABSIS_FOR_INACTIVE_ENEMY = 725;
   /**
    * Absis minimum untuk enemy yang aktif.
    */
