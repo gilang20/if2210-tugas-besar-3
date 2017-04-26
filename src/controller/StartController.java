@@ -52,5 +52,7 @@ public class StartController {
     startDialog.getParent().getGamePanel().getEnemyController().start();
     startDialog.getParent().getScorePanel().getDataController().start();
     startDialog.getParent().getGamePanel().getBackgroundController().start();
+    Sound sound = new Sound("src/assets/Backsound.wav");
+    sound.playSound();
   }
 }
