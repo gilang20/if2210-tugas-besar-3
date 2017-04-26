@@ -9,6 +9,7 @@ package controller;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.GameState;
+import model.Sound;
 import view.EndDialog;
 
 /**
@@ -31,6 +32,8 @@ public class EndController {
    * Menghentikan thread-thread dari game.
    */
   public void endGame() {
+    Sound sound = new Sound("src/assets/Die.wav");
+    sound.playSound();
     endDialog.getParent().setVisible(false);
     endDialog.getScore().setText("Score = " + endDialog.getParent()
         .getScorePanel().getDataController().getGameStateModel().getScore());

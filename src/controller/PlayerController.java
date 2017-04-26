@@ -8,6 +8,7 @@ package controller;
 
 import javax.swing.JLabel;
 import model.Player;
+import model.Sound;
 
 /**
  * Controller untuk model Player.
@@ -45,6 +46,8 @@ public class PlayerController extends Thread {
   public void jump() {
     int initialOrdinat = playerModel.getOrdinat();
     int verticalDelay = 92;
+    Sound sound = new Sound("src/assets/Jump.wav");
+    sound.playSound();
     do {
       playerModel.setOrdinat(playerView.getY() - 1);
       playerView.setLocation(playerModel.getAbsis(), playerModel.getOrdinat());

@@ -9,6 +9,7 @@ package controller;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import model.Sound;
 import view.StartDialog;
 
 /**
