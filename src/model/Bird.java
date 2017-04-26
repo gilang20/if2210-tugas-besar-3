@@ -1,7 +1,7 @@
 /**
- * Nama : Arno Alexander
- * NIM : 13515141
- * Kelompok : Komodo Dragon
+ * Nama : Arno Alexander.
+ * NIM : 13515141.
+ * Kelompok : Komodo Dragon.
  */
 
 package model;

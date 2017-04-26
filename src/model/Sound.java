@@ -3,30 +3,36 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package model;
 
 import javax.sound.sampled.*;
 import java.io.File;
-import java.io.IOException;
-import javax.sound.sampled.LineEvent.Type;
+
 /**
- *
+ * Merepresentasikan suara.
  * @author adyanaufalF
  */
 public class Sound {
+  
   private File sourceFile;
+  
   /**
    * Konstruktor.
    * @param file untuk namafile
    */
-  public Sound(String file){
+  public Sound(String file) {
     sourceFile = new File(file);
   }
   
+  /**
+   * Memainkan suara.
+   */
   public synchronized void playSound() {
     new Thread(new Runnable() {
     // The wrapper thread is unnecessary, unless it blocks on the
     // Clip finishing; see comments.
+      @Override
       public void run() {
         try {
           Clip clip = AudioSystem.getClip();
@@ -41,7 +47,7 @@ public class Sound {
     }).start();
   }
   
-  public File getSoundFile(){
+  public File getSoundFile() {
     return sourceFile;
   }
 }

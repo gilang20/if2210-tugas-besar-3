@@ -79,7 +79,7 @@ public class GameState {
    * Loader data highScore.
    * @throws java.io.FileNotFoundException exception
    */
-  public void loadHighScore() throws FileNotFoundException{
+  public void loadHighScore() throws FileNotFoundException {
     Scanner fileScanner = new Scanner(new File("src/data/HighScore.txt"));
     highScore = fileScanner.nextInt();
   }
@@ -88,9 +88,9 @@ public class GameState {
    * Saving data highScore.
    * @throws java.io.FileNotFoundException exception
    */
-  public void saveHighScore() throws FileNotFoundException{
-    File Fileout = new File("src/data/HighScore.txt");
-    PrintWriter fileWriter = new PrintWriter(Fileout);
+  public void saveHighScore() throws FileNotFoundException {
+    File fileout = new File("src/data/HighScore.txt");
+    PrintWriter fileWriter = new PrintWriter(fileout);
     fileWriter.println(highScore);
     fileWriter.flush();
   }
